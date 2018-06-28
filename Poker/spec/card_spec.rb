@@ -1,5 +1,6 @@
 require "rspec"
 require "card"
+require "deck"
 
 
 
@@ -20,5 +21,3 @@ describe Card do
   end 
   
 end 
-
-
