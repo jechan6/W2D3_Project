@@ -18,8 +18,20 @@ class Hand
   def hand_value 
     sorted = @cards.sort_by {|card| card.value}
     values = values(sorted)
+    #only runs when there is not even a pair
     return [9, values.last] if values == values.uniq unless is_a_straight?(sorted)
     
+    #now check for pairs 
+    #do with a counter hash
+    #if length of hash.keys is 3, it's two-pair. if it's 4, it's one pair.
+    #if it's 2, it must be a full house or four of a kind.
+    #make sure 2-pair is not four-of-a-kind
+    #(Actually, this counter hash can be used for the high-card test as well.)
+    
+    #we have the straight test. need a test for flush: all same suit.
+    # run both, and you have the straight flush test. 
+    
+  
   
   end
   
